@@ -1,0 +1,157 @@
+.container{
+    width: 100%;
+    height: 60px;
+    background-color: var(--primary-80);
+    z-index: 10;
+    position: sticky;
+    top: 0;
+    padding: 10px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.container > button {
+    display: none;
+}
+
+/* logo section */
+.logo{
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo > p{
+    font-size: 1.25rem;
+    font-family: "poppins", sans-serif;
+    font-weight: 600;
+    color: var(--primary-10);
+    letter-spacing: 1px;
+}
+
+.logo > img{
+    height: 40px;
+}
+
+/* user section */
+
+.user{
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0px 10px;
+}
+
+.user > div{
+    height: 40px;
+    width: 40px;
+    
+}
+
+.user img{
+    width: 100%;
+    height : 100%;
+    border-radius: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.user > p{
+    font-size: 1rem;
+    font-family: "poppins", sans-serif;
+    font-weight: 400;
+    color: var(--primary-10);
+    /* letter-spacing: ; */
+    cursor: pointer;
+}
+
+/* link section */
+.links{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+
+.links  p{
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: "poppins", sans-serif;
+    font-weight: 400;
+    color: var(--primary-10);
+}
+
+.links > button{
+    display: none;
+}
+
+/* mobile view styles */
+
+.smallContainer{
+    width: 100%;
+    height : 100vh;
+    background-color: var(--primary-80);
+    position: relative;
+}
+
+.smallContainer > button{
+    position: absolute;
+    top:0px;
+    right: 20px;
+}
+
+.list{
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-decoration: none;
+}
+
+.list p{
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: "poppins", sans-serif;
+    font-weight: 400;
+    color: var(--primary-10);
+    margin : 0px 20px;
+}
+
+.btn{
+    background-color: var(--primary-10);
+    width: fit-content;
+    padding: 10px 15px;
+}
+
+.btn:focus{
+    outline : none;
+}
+
+@media screen and (max-width : 768px){
+    .container > button{
+        display: block;
+    }
+    .links > button{
+        display : block;
+    }
+
+    .links{
+        display: none;
+    }
+
+    .user{
+        display: none;
+    }
+
+    .container{
+        justify-content: space-between;
+    }
+}
+
+

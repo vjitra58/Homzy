@@ -1,0 +1,90 @@
+.container{
+    width: 100%;
+    min-height: calc(100vh - 260px);
+    background-color:var(--primary-10);
+}
+
+.grid_container{
+    padding: 20px 40px;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: auto auto auto auto;
+    grid-auto-rows: minmax(100px, auto);
+    justify-content: center;
+    background: rgb(220,31,213);
+    background: linear-gradient(332deg, rgba(220,31,213,0.9848272072500875) 0%, rgba(190,21,234,0.4414098403033089) 55%, rgba(54,21,232,0.8251633417038691) 100%);
+ 
+ 
+}
+
+.image_item:nth-child(3n + 1){
+    grid-column-end: span 2;
+}
+
+/* img{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+} */
+
+.modal{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close{
+    z-index: 20;
+    height: 40px;
+    width: 40px;
+    position : absolute;
+    top: 60px;
+    right : 20px;
+    background-color: white;
+    border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   box-shadow: 5px 10px 10px var(--grey-80);
+}
+
+.imageContainer{
+    width: 100%;
+    height: 100%;
+    /* background-color: aquamarine; */
+    display: flex;
+    image-rendering: optimizeSpeed;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageContainer  > img{
+    display: block;
+    object-fit: fill;
+    object-position: center;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+
+@media screen and (max-width: 768px) {
+    .grid_container{
+        grid-template-columns: auto auto;
+    }   
+}
+
+
+@media screen and (max-width: 520px) {
+    .grid_container{
+        grid-template-columns: auto;
+    }  
+}
+
