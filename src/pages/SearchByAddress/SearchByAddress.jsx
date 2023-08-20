@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import style from "./styles.module.css";
-import Search from '../Search/Search.jsx';
-import ImageDisplay from '../ImageDisplay/ImageDisplay';
+import Search from '../../components/Search/Search.jsx';
+import ImageDisplay from '../../components/ImageDisplay/ImageDisplay';
 
 
 const SearchByAddress = () => {

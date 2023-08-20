@@ -4,6 +4,8 @@ import Image from "../Image/Image.jsx";
 import Modal from "react-modal";
 import {BiExitFullscreen} from "react-icons/bi";
 import { AnimatePresence, motion } from 'framer-motion';
+import data from "../../data/images.js";
+import empty from "../../assets/empty.jpg"
 
 const customStyles = {
     content: {
@@ -40,10 +42,18 @@ const ImageDisplay = ({photos}) => {
   return (
     <div className={style.container}>
         <div className={style.grid_container}>
-            {data?.map((photo, key)=>
-               <Image src={photo.url} key={key} index={key} 
-                    handler={handleImageTap}
-               />
+            {data.length !=0 ?(
+                 data?.map((photo, key)=>
+                 <motion.div
+                  whileTap={{scale: 0.9}}
+                 >
+                      <Image src={photo.url} key={key} index={key} 
+                      handler={handleImageTap}
+                 />
+                 </motion.div>
+              )
+            ) : (
+                <img className={style.emptyImage} src={empty} />
             )}
         </div>
 
@@ -83,31 +93,4 @@ const ImageDisplay = ({photos}) => {
 
 export default ImageDisplay
 
-const data = [
-    {url : "https://photos.zillowstatic.com/fp/dd6de65175511b6bddd652e4c8905c8e-cc_ft_1536.jpg"},
-    {url : "https://photos.zillowstatic.com/fp/0ad93bb9c447241713afd25031dfe4bc-cc_ft_1536.jpg"},
-    {url : "https://photos.zillowstatic.com/fp/ecf8e6609d6ee7b42d10de9f10b23c65-cc_ft_1536.jpg"},
-    {url : "https://photos.zillowstatic.com/fp/dd6de65175511b6bddd652e4c8905c8e-cc_ft_1536.jpg"},
-    {url : "https://photos.zillowstatic.com/fp/dd6de65175511b6bddd652e4c8905c8e-cc_ft_1536.jpg"},
-    {url : "https://photos.zillowstatic.com/fp/dd6de65175511b6bddd652e4c8905c8e-cc_ft_1536.jpg"},
-    {url : "https://photos.zillowstatic.com/fp/dd6de65175511b6bddd652e4c8905c8e-cc_ft_1536.jpg"},
-    {url : "https://photos.zillowstatic.com/fp/dd6de65175511b6bddd652e4c8905c8e-cc_ft_1536.jpg"},
-    {url : "https://photos.zillowstatic.com/fp/dd6de65175511b6bddd652e4c8905c8e-cc_ft_1536.jpg"},
-    {url : "https://photos.zillowstatic.com/fp/dd6de65175511b6bddd652e4c8905c8e-cc_ft_1536.jpg"},
-    {url : "https://photos.zillowstatic.com/fp/dd6de65175511b6bddd652e4c8905c8e-cc_ft_1536.jpg"},
-    {url : "https://photos.zillowstatic.com/fp/dd6de65175511b6bddd652e4c8905c8e-cc_ft_1536.jpg"},
-    {url : "https://photos.zillowstatic.com/fp/dd6de65175511b6bddd652e4c8905c8e-cc_ft_1536.jpg"},
-    {url : "https://photos.zillowstatic.com/fp/dd6de65175511b6bddd652e4c8905c8e-cc_ft_1536.jpg"},
-    {url : "https://photos.zillowstatic.com/fp/dd6de65175511b6bddd652e4c8905c8e-cc_ft_1536.jpg"},
-    {url : "https://photos.zillowstatic.com/fp/dd6de65175511b6bddd652e4c8905c8e-cc_ft_1536.jpg"},
-    {url : "https://photos.zillowstatic.com/fp/dd6de65175511b6bddd652e4c8905c8e-cc_ft_1536.jpg"},
-    {url : "https://photos.zillowstatic.com/fp/dd6de65175511b6bddd652e4c8905c8e-cc_ft_1536.jpg"},
-    {url : "https://photos.zillowstatic.com/fp/dd6de65175511b6bddd652e4c8905c8e-cc_ft_1536.jpg"},
-    {url : "https://photos.zillowstatic.com/fp/dd6de65175511b6bddd652e4c8905c8e-cc_ft_1536.jpg"},
-    {url : "https://photos.zillowstatic.com/fp/dd6de65175511b6bddd652e4c8905c8e-cc_ft_1536.jpg"},
-    {url : "https://photos.zillowstatic.com/fp/dd6de65175511b6bddd652e4c8905c8e-cc_ft_1536.jpg"},
-    {url : "https://photos.zillowstatic.com/fp/dd6de65175511b6bddd652e4c8905c8e-cc_ft_1536.jpg"},
-    {url : "https://photos.zillowstatic.com/fp/dd6de65175511b6bddd652e4c8905c8e-cc_ft_1536.jpg"},
-    {url : "https://photos.zillowstatic.com/fp/dd6de65175511b6bddd652e4c8905c8e-cc_ft_1536.jpg"},
-    {url : "https://photos.zillowstatic.com/fp/dd6de65175511b6bddd652e4c8905c8e-cc_ft_1536.jpg"},
-]
+// const data = [];

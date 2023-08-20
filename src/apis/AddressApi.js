@@ -9,8 +9,7 @@ export const getAddressDetails = async (address) => {
             {
               headers: {
                 "Content-type": "application/json",
-                // "X-RapidAPI-Key" : "9c9ad0de06msh170f4fdbeaaeb96p19852fjsnaa7aa2e95c54"
-                "X-RapidAPI-Key" : "4316778defmsh5cb230aefd3503cp1ef15cjsna947ab79ed1c"
+                "X-RapidAPI-Key" : "9c9ad0de06msh170f4fdbeaaeb96p19852fjsnaa7aa2e95c54"
               },
             }
           );
@@ -28,7 +27,7 @@ export const getAddressDetails = async (address) => {
     }
 }
 
-
+//this endpoint fetches the images corrosponding to a property(zpid);
 export const getPhotosByZpid = async (zpid) =>{
     try{
 

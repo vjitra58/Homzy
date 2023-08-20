@@ -36,6 +36,7 @@ const Navbar = () => {
         animate={{height:"60px"}}
         transition={{duration: "1s", type: "spring", stiffness: 200}}
     >
+        <Link to="/">
         <motion.div className={style.logo}
            variants={popUpVariant}
            initial="initial"
@@ -44,6 +45,7 @@ const Navbar = () => {
             <img src={logo} />
             <p>Homzy</p>
         </motion.div>
+        </Link>
 
         <motion.div className={style.links}
              variants={popUpVariant}
@@ -56,7 +58,9 @@ const Navbar = () => {
             <Link to="/search">
                 <p>Search</p>
             </Link>
-            <p>About</p>
+            <Link to="/about">
+                <p>About</p>
+            </Link>
         </motion.div>
 
         <div className={style.user}>

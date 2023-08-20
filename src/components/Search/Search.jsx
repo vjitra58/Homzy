@@ -30,6 +30,21 @@ const Search = ({setPhotos}) => {
         setPhotos(photos);
     }
 
+    const handleDummyAddress = async(e)=>{
+        if(!address){
+            console.log("please enter a Address");
+            return;
+        }
+
+        const zpid = await getAddressDetails(address);
+
+        if(zpid == null){
+            console.log("Please Enter a Valid Address");
+        }
+
+        // const photos = 
+    }
+
   return (
     <div className={style.container}>
         <p>View Home By typing the address</p>

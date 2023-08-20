@@ -1,22 +1,32 @@
 .container{
     width: 100%;
     min-height: calc(100vh - 260px);
-    background-color:var(--primary-10);
+   
 }
 
 .grid_container{
     padding: 20px 40px;
     height: 100%;
+    min-height: calc(100vh - 260px);
+    max-width: 1150px;
+    margin: auto;
     width: 100%;
     display: grid;
     gap: 20px;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto;
     grid-auto-rows: minmax(100px, auto);
     justify-content: center;
-    background: rgb(220,31,213);
-    background: linear-gradient(332deg, rgba(220,31,213,0.9848272072500875) 0%, rgba(190,21,234,0.4414098403033089) 55%, rgba(54,21,232,0.8251633417038691) 100%);
- 
- 
+    background-size: cover;
+    background-position: center;
+    /* background: rgb(220,31,213);
+    background: linear-gradient(332deg, rgba(220,31,213,0.9848272072500875) 0%, rgba(190,21,234,0.4414098403033089) 55%, rgba(54,21,232,0.8251633417038691) 100%); */
+}
+
+.emptyImage{
+    object-fit: cover;
+    object-position: center;
+    height : auto;
+    width: 400px;
 }
 
 .image_item:nth-child(3n + 1){
